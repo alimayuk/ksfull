@@ -1,0 +1,58 @@
+import React from "react";
+import "./css/Footer.css";
+import { Link } from "react-router-dom";
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footerTop">
+          <div className="footerLeft">
+            <h1>KAH Yazılım</h1>
+            <p className="footerDesc">
+              Müşteri odaklı web servisleriyle dijital dünyada öne çıkın!
+              İhtiyaçlarınızı karşılamak için özel çözümler üretiyor, başarıya
+              giden yolda sizinle birlikte ilerliyoruz.
+            </p>
+          </div>
+          <div className="footerRight">
+            <div className="company">
+              <h2>Kurumsal</h2>
+              <ul className="list">
+                <Link to="/hizmetler" className="listItem">
+                  <li>Hizmetler</li>
+                </Link>
+                <Link to="/hakkimizda" className="listItem">
+                  <li>Hakkımızda</li>
+                </Link>
+                <Link to="/projeler" className="listItem">
+                  <li>Projeler</li>
+                </Link>
+                <Link to="/blogs" className="listItem">
+                  <li>Yazılar</li>
+                </Link>
+              </ul>
+            </div>
+            <div className="support">
+              <h2>Destek</h2>
+              <ul className="list">
+                <Link to="/iletişim" className="listItem">
+                  <li>İletişim</li>
+                </Link>
+                <Link to="/hakkimizda" className="listItem">
+                  <li>SSS</li>
+                </Link>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr className="footerHr"/>
+        <div className="footerBottom">
+          KAH Yazılım © 2023 · Tüm Hakları Saklıdır.
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

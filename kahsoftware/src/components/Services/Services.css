@@ -1,0 +1,44 @@
+.Services {
+  background-color: black;
+  color: var(--customWhiteSoft);
+  .container {
+    min-height: 100vh;
+    padding: 50px 10px;
+    .hText {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 50px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Services {
+    .container {
+        .hText {
+          font-size: 40px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+    .Services {
+        .container {
+            .hText {
+        font-size: 30px !important;
+    }
+  }}
+}
+@media screen and (max-width: 600px) {
+    .Services {
+        .container {
+            .hText {
+        font-size: x-large !important;
+    }}
+  }
+}

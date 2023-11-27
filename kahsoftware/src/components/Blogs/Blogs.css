@@ -1,0 +1,38 @@
+.Blogs{
+    background-color: black;
+    color: white;
+    min-height: calc(100vh - 92px);
+   
+    .container{
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        
+        .blogTitle{
+            text-align: center;
+            color: var(--customWhiteSoft);
+        }
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Blogs{
+      
+        .container{
+
+            .cards{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

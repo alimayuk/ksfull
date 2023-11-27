@@ -1,0 +1,79 @@
+.Contact {
+  background-color: black;
+  color: var(--customWhiteSoft);
+  .container {
+    padding: 50px 10px;
+    .Hcontact {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .formWrapper {
+      display: flex;
+      gap: 50px;
+      .move {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 50%;
+        min-width: 300px;
+      }
+      .form {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        min-width: 300px;
+        flex-direction: column;
+        gap: 30px;
+        
+        & button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+          padding: 15px 90px;
+          max-width: max-content;
+          background-color: var(--customWhiteSoft);
+          color: black;
+          font-weight: 400;
+          border-radius: 5px;
+          font-size: 25px;
+          cursor: pointer;
+        }
+        .formItem {
+          display: flex;
+          flex-direction: column;
+          font-size: 20px;
+          & input {
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            padding: 10px 5px;
+            font-size: 24px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+    .Contact{
+        .container{
+            .formWrapper{
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 80px;
+                .form{
+                    width: 100%;
+                        & button{
+                            padding: 10px 50px !important;
+                            font-size: 20px !important;
+                        }
+                   
+                }
+            }
+        }
+    }
+}

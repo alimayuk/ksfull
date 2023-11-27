@@ -1,0 +1,50 @@
+.Faq {
+  background-color: black;
+  color: var(--customWhiteSoft);
+  .container {
+    display: flex;
+    padding: 50px 10px;
+
+    .left {
+      flex: 1;
+
+      & p{
+        color: grey;
+        margin-top: 5px;
+      }
+    }
+    .right {
+      flex: 1;
+      
+      .faq-row-wrapper {
+        background-color: transparent;
+
+        .faq-body {
+          .faq-row {
+            .row-title {
+              color: var(--customWhiteSoft);
+            }
+            .row-content {
+              .row-content-text {
+                padding: 20px 0px;
+                color: grey;
+                text-indent: 30px;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .Faq {
+    
+    .container {
+      display: flex;
+     flex-direction: column;
+     gap: 50px;
+}}}

@@ -1,0 +1,88 @@
+.adminNav {
+    background-color: black;
+    color: white;
+  .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 5px;
+    .menuIcon {
+      cursor: pointer;
+    }
+    .navMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 50px 0px;
+      width: 250px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+      color: white;
+      transition: all 0.3s ease-in;
+      transform: translateX(-100%);
+      z-index: 999;
+    }
+    .navItem {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .navLinks{
+        padding: 10px 5px;
+        width: 100%;
+    }
+    .dropdownMenu {
+      display: none;
+      position: static;
+      top: 100%;
+      left: 0;
+      background-color: transparent;
+      z-index: 1;
+      width: 150px;
+      border-radius: 5px;
+    }
+    .dropdownItem{
+      padding: 10px 5px;
+    }
+    .closeBtn{
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      position: absolute;
+      cursor: pointer;
+    }
+    .dropdownBtn {
+      display: inline-flex;
+      transition: all 0.2s ease;
+      flex: 1;
+      justify-content: flex-end;
+    }
+    .menuItemTitle{
+      flex: 2;
+    }
+    .Active {
+      transform: translateX(0);
+    }
+    .drop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0px;
+    }
+    .rotate {
+      rotate: 180deg;
+    }
+    .dropdownMenu.Active {
+      display: block;
+    }
+    .logoutBtn{
+      padding: 20px 5px;
+    }
+  }
+}

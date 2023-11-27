@@ -1,0 +1,28 @@
+.ProjectsComp{
+    background-color: black;
+    color: ;
+    min-height: calc(100vh - 91px);
+    .container{
+        padding: 50px 10px;
+        width: 100%;
+        .projectcards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ProjectsComp {
+      .container{
+        .projectcards{
+            justify-content: baseline;
+            gap: 50px;
+        }
+      }
+    }
+  }

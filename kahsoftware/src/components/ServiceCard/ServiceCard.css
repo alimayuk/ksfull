@@ -1,0 +1,37 @@
+.ServiceCard {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  padding: 35px 5px;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transform: translateY(-5px);
+  }
+  .icon {
+    background-color: #f2f2ff;
+    padding: 20px;
+    border-radius: 50%;
+    .cardIcon {
+      font-size: 40px;
+      color: #ff359f;
+    }
+  }
+  .cardTitle {
+    letter-spacing: 1px;
+  }
+  .cardDesc {
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 23px;
+    color: grey;
+  }
+  
+}

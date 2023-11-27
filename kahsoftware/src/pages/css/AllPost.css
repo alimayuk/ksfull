@@ -1,0 +1,15 @@
+.AllPost{
+    .container{
+        padding: 50px 10px;
+        & h1{
+            text-align: center;
+        }
+        .allPost{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            padding: 50px 0px;
+        }
+    }
+}
