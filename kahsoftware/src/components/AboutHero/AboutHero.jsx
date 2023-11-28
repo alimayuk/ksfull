@@ -15,7 +15,7 @@ const AboutHero = () => {
             </p>
         </div>
         <div className="imageSide">
-        <img src="https://images.pexels.com/photos/2566581/pexels-photo-2566581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="image" alt="" />
+        <img src="https://images.pexels.com/photos/2566581/pexels-photo-2566581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="image" alt="takım çalışması ekip iş yazılım " />
         </div>
         </div>
       </div>

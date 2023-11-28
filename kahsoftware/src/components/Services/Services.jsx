@@ -8,6 +8,7 @@ import { TbSeo } from "react-icons/tb";
 import { IoIosText } from "react-icons/io";
 import { TbDeviceMobileCode } from "react-icons/tb";
 
+
 const Services = () => {
   return (
     <div className='Services' id='hizmetler'>

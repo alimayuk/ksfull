@@ -20,7 +20,7 @@ const AdminCard = ({ item }) => {
   };
   return (
     <div className="AdminCard">
-      <img src={`/upload/${item?.photo}`} alt="" />
+      <img src={`/upload/${item?.photo}`} alt="blog paylaşım fotoğraf" />
       <div className="contact">
         <p>{item.title}</p>
         <p className="catBtn">{item.category}</p>

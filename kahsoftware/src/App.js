@@ -15,6 +15,7 @@ import Login from "./pages/Login";
 import { AuthContext } from "./context/authContext";
 import { useContext } from "react";
 import AllPost from "./pages/AllPost";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const {currentUser} = useContext(AuthContext)
@@ -52,6 +53,7 @@ function App() {
       <Route path="/admingiriş" element={currentUser ? <AdminPage/> : <Login/>}/>
       <Route path="/admintumpaylasim" element={currentUser ? <AllPost/> : <Login/>}/>
     </Route>
+    <Route path="*" element={<ErrorPage />} />
     </Routes>
   </Router>
   );

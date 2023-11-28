@@ -20,6 +20,15 @@
           max-width: 500px;
           color: grey;
         }
+        .socialLink{
+          font-size: 25px;
+          color: var(--customWhiteSoft);
+          transition: all .3s ease-in-out;
+          max-width: max-content;
+          &:hover{
+            color: #ff359f;
+          }
+        }
       }
       & div {
         width: 50%;
