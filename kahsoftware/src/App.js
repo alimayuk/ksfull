@@ -44,13 +44,13 @@ function App() {
         <Route path="/hizmetler" element={<ServicePage />} />
         <Route path="/hakkimizda" element={<AboutUs />} />
         <Route path="/projeler" element={<Projects />} />
-        <Route path="/iletişim" element={<Contact />} />
+        <Route path="/iletisim" element={<Contact />} />
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/blogs/:id" element={<BlogDetail />} />
       </Route> 
       <Route path="/" element={<AdminLayout/>}>
       <Route path="/adminsayfasi" element={currentUser ? <AdminPage/> : <Login/>}/>
-      <Route path="/admingiriş" element={currentUser ? <AdminPage/> : <Login/>}/>
+      <Route path="/admingiris" element={currentUser ? <AdminPage/> : <Login/>}/>
       <Route path="/admintumpaylasim" element={currentUser ? <AllPost/> : <Login/>}/>
     </Route>
     <Route path="*" element={<ErrorPage />} />

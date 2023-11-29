@@ -31,9 +31,9 @@ const Navbar = () => {
 				<div className="navLinks">
                 <Link className="navLink" to="/hizmetler" onClick={showNavbar} >Hizmetler</Link>
                 <Link className="navLink" to="/hakkimizda" onClick={showNavbar} >Hakkımızda</Link>
-				<Link className="navLink" to="/projeler" onClick={showNavbar} >Porojeler </Link>
+				<Link className="navLink" to="/projeler" onClick={showNavbar} >Projeler </Link>
                 <Link className="navLink" to="/blogs" onClick={showNavbar} >Yazılar</Link>
-				{isMobile && <Link className='contactBtn' to="/iletişim" onClick={showNavbar} >İletişim</Link>}
+				{isMobile && <Link className='contactBtn' to="/iletisim" onClick={showNavbar} >İletişim</Link>}
                 </div>
 				<button
 					className="nav-btn nav-close-btn"
@@ -41,7 +41,7 @@ const Navbar = () => {
 					<FaTimes />
 				</button>
 			</nav>
-            <Link className='contactBtn contactWeb' to="/iletişim" onClick={showNavbar} >İletişim</Link>
+            <Link className='contactBtn contactWeb' to="/iletisim" onClick={showNavbar} >İletişim</Link>
 			<button
 				className="nav-btn"
 				onClick={showNavbar}>

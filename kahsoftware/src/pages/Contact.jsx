@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/Contact.css";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import axios from "axios";
+import { BASE_URL } from "../baseUrl";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,7 +13,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/email/", formData);
+      const response = await axios.post(`${BASE_URL}/email/`, formData);
       console.log(response.data);
       // İsteğin başarılı olması durumunda başka bir işlem yapılabilir
     } catch (error) {

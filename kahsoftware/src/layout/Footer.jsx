@@ -2,6 +2,7 @@ import React from "react";
 import "./css/Footer.css";
 import { Link } from "react-router-dom";
 import { FaInstagram } from "react-icons/fa6";
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -37,7 +38,7 @@ const Footer = () => {
             <div className="support">
               <h2>Destek</h2>
               <ul className="list">
-                <Link to="/iletişim" className="listItem">
+                <Link to="/iletisim" className="listItem">
                   <li>İletişim</li>
                 </Link>
                 <Link to="/hakkimizda" className="listItem">

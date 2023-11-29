@@ -3,7 +3,7 @@ const { createPost, getPost, getAllPost, deletePost, updatePost } = require("../
 const verifyToken = require("../middleware/auth")
 const router = express.Router();
 
-router.post("/", createPost);
+router.post("/",verifyToken, createPost);
 router.get("/:id", getPost);
 router.get("/",getAllPost);
 router.put("/:id",verifyToken, updatePost);

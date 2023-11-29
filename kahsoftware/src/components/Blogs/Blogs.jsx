@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./Blogs.css";
 import BlogCard from "../BlogCard/BlogCard";
 import axios from "axios";
+import { BASE_URL } from "../../baseUrl";
 
 const Blogs = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const post = await axios.get("post/");
+      const post = await axios.get(`${BASE_URL}/post/`);
       setPosts(post.data);
     };
     fetchData();

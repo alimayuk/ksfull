@@ -4,6 +4,7 @@ import {useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import DOMPurify from "dompurify";
 import {Helmet} from "react-helmet-async";
+import { BASE_URL } from '../baseUrl';
 
 const BlogDetail = () => {
     const [post,setPost] = useState({});
@@ -13,7 +14,7 @@ const BlogDetail = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const res = await axios.get(`/post/${postId}`);
+          const res = await axios.get(`${BASE_URL}/post/${postId}`);
           setPost(res.data);
         } catch (err) {
           console.log(err);

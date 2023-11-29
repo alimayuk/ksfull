@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import "./css/AllPost.css";
 import axios from "axios";
 import AdminCard from "../components/AdminCard/AdminCard";
+import { BASE_URL } from "../baseUrl";
 
 const AllPost = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const post = await axios.get("/post/");
+      const post = await axios.get(`${BASE_URL}/post/`);
       setPosts(post.data);
     };
     fetchData();

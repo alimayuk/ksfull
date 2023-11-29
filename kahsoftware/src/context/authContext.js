@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import { BASE_URL } from "../baseUrl";
 
 export const AuthContext = createContext();
 
@@ -10,7 +11,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (inputs) => {
     try {
-      const res = await axios.post("auth/", inputs);
+      const res = await axios.post(`${BASE_URL}/auth/`, inputs);
       setCurrentUser(res.data);
     } catch (error) {
       console.error("Login error:", error);
@@ -19,7 +20,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post("auth/logout");
+      await axios.post(`${BASE_URL}/auth/logout`);
         localStorage.removeItem("user");
       setCurrentUser(null);
     } catch (error) {

@@ -5,6 +5,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./css/AdminPage.css";
 import axios from "axios";
+import { BASE_URL } from "../baseUrl";
 const AdminPage = () => {
   const {currentUser,token} = useContext(AuthContext)
   const state = useLocation().state;
@@ -20,7 +21,7 @@ const AdminPage = () => {
       if (file) {
         const formData = new FormData();
         formData.append("file", file);
-        const res = await axios.post("/upload", formData);
+        const res = await axios.post(`${BASE_URL}/upload/`, formData);
         return res.data;
       }
       return null;
@@ -34,7 +35,7 @@ const AdminPage = () => {
     const imgUrl = await upload();
     try {
       state ? 
-      await axios.put(`/post/${state._id}`,{
+      await axios.put(`${BASE_URL}/post/${state._id}`,{
         title,
         desc: value,
         category: cat,
@@ -42,7 +43,7 @@ const AdminPage = () => {
         photo: file ? imgUrl : "blog.png",
         username: currentUser.username,
         access_token: token
-      }) : await axios.post(`/post/`,{
+      }) : await axios.post(`${BASE_URL}/post/`,{
         title,
         desc: value,
         category: cat,
@@ -133,7 +134,7 @@ const AdminPage = () => {
               id="proje"
               onChange={(e) => setCat(e.target.value)}
             />
-            <label htmlFor="proje">Proje</label> 
+            <label htmlFor="proje"> Proje</label> 
            </div>
             {cat === "proje" && <input className="extraItem" type="text" onChange={(e) => setSitelink(e.target.value)} placeholder="Site Linki" />}
             </div>

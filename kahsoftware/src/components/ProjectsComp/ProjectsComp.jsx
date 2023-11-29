@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./ProjectsComp.css";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import axios from "axios";
+import { BASE_URL } from "../../baseUrl";
 const ProjectsComp = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const post = await axios.get("post/");
+      const post = await axios.get(`${BASE_URL}/post/`);
       setPosts(post.data);
     };
     fetchData();
